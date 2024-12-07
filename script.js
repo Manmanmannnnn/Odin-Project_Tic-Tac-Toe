@@ -123,15 +123,11 @@ const winChecker=()=>{
 
 const overAllWinner=()=>{
     if(players.firstPlayerScore===3){
-        players.firstPlayerScore=0;
-        player1Score.textContent=players.firstPlayerScore;
         gameResultText.textContent=`Congratulations! ${players.firstPlayerName} wins the game!`
         gameWinnerDialog.showModal();
     }
 
     else if(players.secondPlayerScore===3){
-        players.secondPlayerScore=0;
-        player2Score.textContent=players.secondPlayerScore;
         gameResultText.textContent=`Congratulations! ${players.secondPlayerName} wins the game!`
         gameWinnerDialog.showModal();
     }
@@ -165,6 +161,10 @@ nextRoundBtn.addEventListener('click',(event)=>{
 
 playAgainBtn.addEventListener('click',(event)=>{
     event.preventDefault();
+    players.firstPlayerScore=0;
+    player1Score.textContent=players.firstPlayerScore;
+    players.secondPlayerScore=0;
+    player2Score.textContent=players.secondPlayerScore;
     gameWinnerDialog.close();
     roundWinnerDialog.close();
     drawingCells.forEach(cell=>cell.innerHTML='');
