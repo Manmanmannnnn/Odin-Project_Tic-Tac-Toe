@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="head">
+            <h1>Tic-Tac-Toe!</h1>
+        </div>
+
+        <div class="main-content">
+
+            <div class="playerSection">
+
+            <div class="firstPlayerInfo">
+                <p>Player 1: <span class="firstPlayerName"></span></p>
+                <img src="./close_200dp_434343_FILL0_wght700_GRAD0_opsz48.svg" alt="">
+                <p>Score: <span class="firstPlayerScore">0</span></p>
+            </div>
+
+            <div class="secondPlayerInfo">
+                <p>Player 2: <span class="secondPlayerName"></span></p>
+                <img src="./radio_button_unchecked_200dp_434343_FILL0_wght700_GRAD0_opsz48.svg" alt="">
+                <p>Score: <span class="secondPlayerScore">0</span></p>
+                
+            </div>
+
+            </div>
+
+            <div class="drawingBoard">
+
+                <div class="draw">
+                    <div class="cell 1"></div>
+                    <div class="cell 2"></div>
+                    <div class="cell 3"></div>
+                    <div class="cell 4"></div>
+                    <div class="cell 5"></div>
+                    <div class="cell 6"></div>
+                    <div class="cell 7"></div>
+                    <div class="cell 8"></div>
+                    <div class="cell 9"></div>
+                </div>
+
+
+            </div>
+
+            <button id="resetBtn">Reset Game</button>
+        </div>
+
+        
+    </div>
+
+    <dialog id="roundWinner">
+        <span id="resultText"></span>
+        <button id="nextRoundBtn">Start next round!</button>
+        
+
+    </dialog>
+
+    <dialog id="gameWinner">
+        <span id="gameResultText"></span>
+        <button id="playAgainBtn">Play Again?</button>
+        
+
+    </dialog>
+
+
+</body>
+</html>
